@@ -1,0 +1,10 @@
+version: "2"
+
+services:
+ nginx-auto-reload:
+  image: "nginx-auto-reload:local"
+  container_name: nginx-auto-reload
+  volumes:
+   - ./conf.d:/etc/nginx/conf.d:ro
+  ports:
+   - "8080:8080"
